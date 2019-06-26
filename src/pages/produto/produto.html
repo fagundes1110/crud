@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Cadastrar Produto
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+      <ion-card *ngFor="let item of contacts" [ngClass]="{'item-inactive': !item.contact.active }">
+  
+        <ion-card-header>
+          <h1>{{ item.contact.codigo }}</h1>
+        </ion-card-header>
+  
+        <ion-card-content>
+          <p>{{ item.contact.descricao }} </p>
+        </ion-card-content>
+  
+        <ion-card-content>
+          <p>{{ item.contact.valor }} </p>
+        </ion-card-content>      
+  
+        <ion-row text-center>
+          <ion-col>
+            <button ion-button icon-left clear small (click)="editContact(item);">
+              <ion-icon name="create"></ion-icon>
+              <div>Editar</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-left clear small (click)="removeContact(item);">
+              <ion-icon name="trash"></ion-icon>
+              <div>Excluir</div>
+            </button>
+          </ion-col> 
+        </ion-row>
+  
+      </ion-card>
+    </ion-list>
+  
+    <ion-fab right bottom>
+      <button ion-fab color="primary" (click)="addContact()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+  </ion-content>
+  

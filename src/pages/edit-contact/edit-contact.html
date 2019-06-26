@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Editar Produto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Código</ion-label>
+      <ion-input type="text" name="codigo" [(ngModel)]="model.codigo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Descricao</ion-label>
+        <ion-input type="text" name="descricao" [(ngModel)]="model.descricao"></ion-input>
+      </ion-item>
+  
+  
+      <ion-item>
+        <ion-label stacked>embalagem</ion-label>
+        <ion-input type="text" name="embalagem" [(ngModel)]="model.embalagem"></ion-input>
+      </ion-item>
+      
+  
+      <ion-item>
+        <ion-label stacked>Peso</ion-label>
+        <ion-input type="number" name="peso" [(ngModel)]="model.peso"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label stacked>Quantidade</ion-label>
+        <ion-input type="number" name="quantidade" [(ngModel)]="model.quantidade"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label stacked>Unidade</ion-label>
+        <ion-input type="text" name="unidade" [(ngModel)]="model.unidade"></ion-input>
+      </ion-item>
+      
+      
+      <ion-item>
+        <ion-label stacked>Valor</ion-label>
+        <ion-input type="number" name="codigo" [(ngModel)]="model.valor"></ion-input>
+      </ion-item>    
+    
+
+
+
+  </ion-list>
+
+  <button ion-button block (click)="save()">Salvar</button>
+
+</ion-content>
